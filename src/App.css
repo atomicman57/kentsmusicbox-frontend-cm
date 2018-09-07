@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
   background-color: #222;
@@ -22,7 +18,84 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+#opening {
+background-color: purple; 
+color: green;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+#mainHeader {
+  text-align: center;
+  color: indigo;
+  background-color: green; /* For browsers that do not support gradients */
+  background-image: linear-gradient(green, yellow); /* Standard syntax (must be last) */
+}
+
+nav {
+  font-size: 30px;
+  padding: 10px;
+  padding-left: 50px;
+  width: 50%;
+  margin: auto;   
+}
+
+form {
+width: 50%;
+margin: auto;
+}
+
+#logInButton {
+  width: 33%;
+  margin: auto; 
+}
+
+.grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+.grad2 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+
+.bigLogin {
+  background-color: aqua  
+}
+
+table {
+  color: green;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  margin: auto; 
+  color: green;
+}
+
+a::after {
+  color: green;
+}
+a::before {
+  color: green;
+}
+
+button {
+  margin: auto; 
+}
+span {
+  color: red;
+}
+
+#playButton {
+  margin: auto;
 }
