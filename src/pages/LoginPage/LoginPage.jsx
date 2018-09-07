@@ -30,14 +30,15 @@ class LoginPage extends Component {
             // throw new Error('Error from user service');
         })
         .then(data => {
-            console.log(data);
+            console.log("data", data);
             if (data.error) {
                 alert(data.error);
                 return;
-            } else {
-                tokenService.setToken(data.jwt);
-                window.location = '/';
             }
+            this.props.handleLogin();
+            tokenService.setToken(data.jwt);
+            window.location = '/';
+    
         })
         .catch(error => {
             console.log(error);

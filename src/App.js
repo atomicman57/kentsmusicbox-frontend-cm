@@ -23,6 +23,10 @@ class App extends Component {
     this.setState({user: userService.getUser()})
   }
 
+  handleLogin = () => {
+    this.setState({user: userService.getUser()})
+  }
+
   componentDidMount() {
     let user = userService.getUser();
     this.setState({user});
@@ -52,7 +56,7 @@ class App extends Component {
           </Route>
           
           <Route exact path="/login">
-            <LoginPage />
+            <LoginPage handleLogin={this.handleLogin} />
           </Route>
 
           <Route exact path="/signup" render={
@@ -60,7 +64,7 @@ class App extends Component {
           } />
 
           <Route exact path="/songs/:song_id" render={
-            (props) => <ViewSong {...props} />
+            (props) => <ViewSong {...props} user={this.state.user}/>
           } />
 
         </Switch>

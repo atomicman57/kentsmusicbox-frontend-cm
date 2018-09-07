@@ -41,6 +41,7 @@ class SignUpForm extends React.Component {
         })
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             this.props.handleSignup();
             tokenService.setToken(data.jwt);
             window.location = '/'
